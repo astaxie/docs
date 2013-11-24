@@ -1,4 +1,36 @@
-docs
+beego 最新的文档
 ====
 
-beego's new docs
+1. [beego的介绍](Intriduction.md)
+2. [快速入门](quickstart/readme.md)
+    - [bee新建项目](quickstart/new.md)	
+	- 路由设置
+	- controller编写
+	- model编写
+	- view编写
+	- 静态文件处理
+3. beego的安装升级
+    - beego的安装
+	- bee的安装
+	- beego的升级	
+4. beego的MVC
+    - controller设计
+	- model设计
+	- view设计
+5. beego的模块设计
+    - session模块
+	- cache模块
+	- logs模块
+	- httplib模块
+	- context模块
+	- toolbox模块
+	- config模块
+6. 应用部署
+    - nginx部署
+    - supervisor部署
+	- apache部署
+	- 独立部署
+7. 应用例子
+    - 在线聊天室
+	- 短域名服务
+	- todo列表	
