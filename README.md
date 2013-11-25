@@ -9,10 +9,10 @@ beego 最新的文档
 	- model编写
 	- view编写
 	- 静态文件处理
-3. beego的安装升级
-    - beego的安装
-	- bee的安装
-	- beego的升级	
+3. [beego的安装升级](install.md)
+    - [beego的安装](install.md)
+	- [beego的升级](install.md)
+	- [bee的安装](bee.md)		
 4. beego的MVC
     - controller设计
 	- model设计
