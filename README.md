@@ -2,17 +2,18 @@ beego 最新的文档
 ====
 
 1. [beego的介绍](Introduction.md)
-2. [快速入门](quickstart/readme.md)
-    - [bee新建项目](quickstart/new.md)	
-	- 路由设置
-	- controller编写
-	- model编写
-	- view编写
-	- 静态文件处理
-3. [beego的安装升级](install.md)
+2. [beego的安装升级](install.md)
     - [beego的安装](install.md)
 	- [beego的升级](install.md)
-	- [bee的安装](bee.md)		
+	- [bee的安装](bee.md)
+3. [快速入门](quickstart/readme.md)
+    - [bee新建项目](quickstart/new.md)	
+	- [路由设置](quickstart/router.md)
+	- [controller编写](quickstart/controller.md)
+	- [model编写](quickstart/model.md)
+	- [view编写](quickstart/view.md)
+	- [静态文件处理](quickstart/static.md)
+		
 4. beego的MVC
     - controller设计
 	- model设计
