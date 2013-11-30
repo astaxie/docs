@@ -12,9 +12,8 @@ beego 最新的文档
 	- [controller编写](quickstart/controller.md)
 	- [model编写](quickstart/model.md)
 	- [view编写](quickstart/view.md)
-	- [静态文件处理](quickstart/static.md)
-		
-4. beego的MVC
+	- [静态文件处理](quickstart/static.md)		
+4. [beego的MVC](mvc/README.md)
     - controller设计
 	- model设计
 	- view设计
