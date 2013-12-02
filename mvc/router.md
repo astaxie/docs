@@ -54,7 +54,7 @@
 	this.Ctx.Input.Param(":ext")
 
 ## 自定义方法及 RESTful 规则
-上面列举的是默认的请求方法名（请求的 method 和函数名一致，例如 GET 请求执行 Get 函数，POST 请求执行 Post 函数），如果用户期望自定义函数名，那么可以使用如下方式：
+上面列举的是默认的请求方法名（请求的 method 和函数名一致，例如 `GET` 请求执行 `Get` 函数，`POST` 请求执行 Post 函数），如果用户期望自定义函数名，那么可以使用如下方式：
 
 	beego.Router("/",&IndexController{},"*:Index")
 使用第三个参数，第三个参数就是用来设置对应 method 到函数名，定义如下
@@ -76,6 +76,7 @@
 一下是不同的 method 对应不同的函数，通过 ; 进行分割的示例：
 
 	beego.Router("/simple",&SimpleController{},"get:GetFunc;post:PostFunc")
+
 可用的 HTTP Method：
 
 * *：包含一下所有的函数
@@ -90,7 +91,7 @@
 如果同时存在 * 和对应的 HTTP Method，那么优先执行 HTTP Method 的方法，例如同时注册了如下所示的路由：
 
 	beego.Router("/simple",&SimpleController{},"*:AllFunc;post:PostFunc")
-那么执行 POST 请求的时候，执行 PostFunc 而不执行 AllFunc。
+那么执行 `POST` 请求的时候，执行 `PostFunc` 而不执行 `AllFunc`。
 
 ## 自动匹配
 用户首先需要把需要路由的控制器注册到自动路由中：
@@ -103,12 +104,12 @@
 除了前缀两个` /:controller/:method `的匹配之外，剩下的 url beego会帮你自动化解析为参数，保存在 `this.Ctx.Input.Param` 当中：
 
 	/object/blog/2013/09/12  调用 ObjectController 中的 Blog 方法，参数如下：map[0:2013 1:09 2:12]
-方法名在内部是保存了用户设置的，例如 Login，url 匹配的时候都会转化为小写，所以，`/object/LOGIN` 这样的 url 也一样可以路由到用户定义的 `Login` 方法中。
+方法名在内部是保存了用户设置的，例如 Login，url 匹配的时候都会转化为小写，所以，`/object/LOGIN` 这样的 `url` 也一样可以路由到用户定义的 `Login` 方法中。
 
-现在已经可以通过自动识别出来下面类似的所有url，都会把请求分发到 controller 的 simple 方法：
+现在已经可以通过自动识别出来下面类似的所有url，都会把请求分发到 `controller` 的 `simple` 方法：
 
 	/controller/simple
 	/controller/simple.html
 	/controller/simple.json
 	/controller/simple.rss
-可以通过 this.Ctx.Input.Param[":ext"] 获取后缀名
+可以通过 `this.Ctx.Input.Param(":ext")` 获取后缀名
