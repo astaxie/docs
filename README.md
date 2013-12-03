@@ -38,22 +38,24 @@ beego 最新的文档
 	- view设计
 		- [模板函数](mvc/template.md)
 		- [错误处理](mvc/errors.md)
-		- [静态文件处理](mvc/static.md)
-		
-5. beego的模块设计
-    - session模块
-	- cache模块
-	- logs模块
-	- httplib模块
-	- context模块
-	- toolbox模块
-	- config模块
-6. 应用部署
+		- [静态文件处理](mvc/static.md)		
+5. [beego的模块设计](module/README.md)
+    - [session模块](module/session.md)
+	- [cache模块](module/cache.md)
+	- [logs模块](module/logs.md)
+	- [httplib模块](module/httplib.md)
+	- [context模块](module/context.md)
+	- [toolbox模块](module/toolbox.md)
+	- [config模块](module/config.md)	
+6. beego高级编程
+	- [进程内监控](advantage/monitor.md)
+	- [热重启](advantage/reload.md)	
+7. 应用部署
     - nginx部署
     - supervisor部署
 	- apache部署
 	- 独立部署
-7. 应用例子
+8. 应用例子
     - 在线聊天室
 	- 短域名服务
 	- todo列表	
