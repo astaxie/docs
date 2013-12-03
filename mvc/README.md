@@ -42,3 +42,4 @@ beego是一个典型的MVC框架，它的整个执行逻辑如下图所示：
 - [错误处理](errors.md)
 - [静态文件处理](static.md)
 - [参数配置](config.md)
+- [日志处理](logs.md)

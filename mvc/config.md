@@ -62,7 +62,23 @@ Beego 中带有很多可配置的参数，我们来一一认识一下它们，�
 * HttpPort
 
 	应用监听端口，默认为 8080。
+	
+* HttpTLS
 
+	是否启用https，默认是关闭
+	
+* HttpCertFile
+	
+	开启https之后，certfile的路径
+
+* HttpKeyFile		
+
+	开启https之后，keyfile的路径
+
+* HttpServerTimeOut
+
+	设置http的超时时间，默认是0，不超时		
+	
 * RunMode
 
 	应用的模式，默认是 dev，为开发模式，在开发模式下出错会提示友好的出错页面，如前面错误描述中所述。
@@ -73,18 +89,7 @@ Beego 中带有很多可配置的参数，我们来一一认识一下它们，�
 
 * RecoverPanic
 
-	是否异常恢复，默认值为 true，即当应用出现异常的情况，通过 recover 恢复回来，而不会导致应用异常退出。
-
-* PprofOn
-
-	是否启用 pprof，默认是 false，当开启之后，用户可以通过如下地址查看相应的 goroutine 执行情况：
-	
-		/debug/pprof
-		/debug/pprof/cmdline
-		/debug/pprof/profile
-		/debug/pprof/symbol 
-
-	关于pprof的信息，请参考官方的描述 [pprof](http://gowalker.org/net/http/pprof)。	
+	是否异常恢复，默认值为 true，即当应用出现异常的情况，通过 recover 恢复回来，而不会导致应用异常退出。	
 
 * ViewsPath
 
@@ -110,6 +115,17 @@ Beego 中带有很多可配置的参数，我们来一一认识一下它们，�
 
 	session 保存路径，默认是空。
 
+* SessionHashFunc
+
+	sessionID生成函数，默认是sha1
+	
+* SessionHashKey
+
+	session hash的key
+	
+* SessionCookieLifeTime
+
+	session默认存在客户端的cookie的时间，默认值是3600s			
 * UseFcgi
 
 	是否启用 fastcgi，默认是 false。
@@ -125,3 +141,39 @@ Beego 中带有很多可配置的参数，我们来一一认识一下它们，�
 * DirectoryIndex
 
 	是否开启静态目录的列表显示，默认不显示目录，返回 403 错误。
+	
+* BeegoServerName
+
+	beego服务器默认在请求的时候输出server为beego
+	
+* EnableAdmin
+
+	是否开启进程内监控模块，默认开启
+	
+* AdminHttpAddr
+
+	监控程序监听的地址，默认值是`localhost`
+	
+* AdminHttpPort
+	
+	监控程序监听的端口，默认值是8088
+	
+* TemplateLeft
+
+	模板左标签，默认值是`{{`
+	
+* TemplateRight
+
+	模板右标签，默认值是`}}`
+	
+* ErrorsShow
+
+	是否显示错误，默认显示错误信息
+
+* XSRFKEY
+
+	XSRF的key信息，默认值是beegoxsrf
+	
+* XSRFExpire
+
+	XSRF过期时间，默认值是0			

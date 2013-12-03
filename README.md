@@ -25,6 +25,7 @@ beego 最新的文档
 		- [多种格式数据输出](mvc/jsonxml.md)
 		- [表单数据验证](mvc/validation.md)
 		- [错误处理](mvc/errors.md)
+		- [日志处理](mvc/logs.md)
 	- [model设计](orm/README.md)
 		- [Orm 使用方法](orm/Orm.md)
 		- [对象的CRUD操作](orm/Object.md)
