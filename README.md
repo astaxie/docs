@@ -35,9 +35,9 @@ beego 最新的文档
 		- [命令模式](orm/Cmd.md)
 		- [Test ORM](orm/Test.md)
 	- view设计
-		- [模板函数](template.md)
-		- [错误处理](errors.md)
-		- [静态文件处理](static.md)
+		- [模板函数](mvc/template.md)
+		- [错误处理](mvc/errors.md)
+		- [静态文件处理](mvc/static.md)
 		
 5. beego的模块设计
     - session模块
