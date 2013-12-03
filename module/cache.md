@@ -22,4 +22,48 @@ beego的cache模块是用来做数据缓存的，设计思路来自于`database/
 	bm.Delete("astaxie")
 
 ## 引擎设置
-上面我们展示了memory的设置														
+目前支持四种不同的引擎，接下来分别介绍这四种引擎如何设置：
+
+- memory
+
+	配置信息如下所示，配置的信息表示GC的时间，表示每个60s会进行一次过期清理：
+	
+		{"interval":60}													
+- file
+
+	配置信息如下所示，配置`CachePath`表示缓存的文件目录，`FileSuffix`表示文件后缀，`DirectoryLevel`表示目录层级，`EmbedExpiry`表示过期设置
+	
+		{"CachePath":"./cache","FileSuffix":".cache","DirectoryLevel":2,"EmbedExpiry":120}
+		
+- redis
+
+	配置信息如下所示，redis采用了库[redigo](http://github.com/garyburd/redigo/redis)，表示redis的连接地址：
+	
+		{"conn":":6039"}
+		
+- memcache
+
+	配置信息如下所示，memcache采用了[vitess的库](http://code.google.com/p/vitess/go/memcache)，表示memcache的连接地址：	
+	
+		{"conn":"127.0.0.1:11211"}	
+		
+## 开发自己的引擎
+cache模块采用了接口的方式实现，因此用户可以很方便的实现接口，然后注册就可以实现自己的Cache引擎：
+
+	type Cache interface {
+		Get(key string) interface{}
+		Put(key string, val interface{}, timeout int64) error
+		Delete(key string) error
+		Incr(key string) error
+		Decr(key string) error
+		IsExist(key string) bool
+		ClearAll() error
+		StartAndGC(config string) error
+	}		
+
+用户开发完毕在最后写类似这样的：
+
+	func init() {
+		Register("myowncache", NewOwnCache())
+	}
+		

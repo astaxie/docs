@@ -110,7 +110,10 @@ globalSessions有多个函数如下所示：
 		SessionAll() int //get all active session
 		SessionGC()
 	}	
-						
-## LICENSE
 
-BSD License http://creativecommons.org/licenses/BSD/		
+最后需要注册自己写的引擎：
+
+	func init() {
+		Register("own", ownadaper)
+	}
+						
