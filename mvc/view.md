@@ -18,6 +18,12 @@ main.go 文件中设置如下：
 
 	beego.AutoRender = false
 
+## 模板标签
+Go语言的默认模板采用了`{{`和`}}`作为左右标签，但是我们有时候在开发中可能界面是采用了angularJS开发，他的模板也是这个标签，故而引起了冲突，在beego中你可以通过配置文件或者直接设置配置变量修改：
+
+	beego.TemplateLeft = "<<<"
+	beego.TemplateRight = ">>>"
+
 ## 模板数据
 
 模板中的数据是通过在 Controller 中 `this.Data` 获取的，所以如果你想在模板中获取内容 `{{.Content}}` ,那么你需要在 Controller 中如下设置：
