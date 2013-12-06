@@ -51,10 +51,10 @@ beego 最新的文档
 	- [进程内监控](advantage/monitor.md)
 	- [热重启](advantage/reload.md)	
 7. 应用部署
-    - nginx部署
-    - supervisor部署
-	- apache部署
-	- 独立部署
+    - [nginx部署](deploy/nginx.md)
+    - [supervisor部署](deploy/supervisor.md)
+	- [apache部署](deploy/apache.md)
+	- [独立部署](deploy/beego.md)
 8. 应用例子
     - 在线聊天室
 	- 短域名服务
