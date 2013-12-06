@@ -49,6 +49,7 @@ beego 最新的文档
 	- [config模块](module/config.md)	
 6. beego高级编程
 	- [进程内监控](advantage/monitor.md)
+	- [过滤器](advantage/filter.md)
 	- [热重启](advantage/reload.md)	
 7. 应用部署
     - [nginx部署](deploy/nginx.md)

@@ -7,4 +7,4 @@ beego正在逐步的走向乐高模式，也就是把系统逐步的模块化，
 - [httplib模块](httplib.md)
 - [context模块](context.md)
 - [toolbox模块](toolbox.md)
-- [config模块](config.md)	
+- [config模块](config.md)
