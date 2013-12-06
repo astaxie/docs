@@ -38,7 +38,6 @@ beego 最新的文档
 	- view设计
 		- [模板处理](mvc/view.md)
 		- [模板函数](mvc/template.md)
-		- [错误处理](mvc/errors.md)
 		- [静态文件处理](mvc/static.md)		
 5. [beego的模块设计](module/README.md)
     - [session模块](module/session.md)
