@@ -31,10 +31,24 @@
 
 当你输入的时候会提示你如何进行详细的调试，显示如下界面：
 
+	request url like '/prof?command=lookup goroutine'
+	the command have below types:
+	1. lookup goroutine
+	2. lookup heap
+	3. lookup threadcreate
+	4. lookup block
+	5. start cpuprof
+	6. stop cpuprof
+	7. get memprof
+	8. gc summary
 
+用户可以通过传递不同的command值获取不同的性能调试信息，比较常用的有`lookup goroutine`、`lookup heap`和`gc summary`
 
-- 
-
-## 监控检查
+## 健康检查
+需要手工注册相应的健康检查逻辑，才能通过URL`http://localhost:8088/healthcheck`获取当前执行的健康检查的状态。
 
 ## 定时任务
+用户需要在应用中添加了task，才能执行相应的任务检查和手工触发任务。
+
+- 检查任务状态URL：`http://localhost:8088/task`
+- 手工执行任务URL：`http://localhost:8088/runtask?taskname=任务名`
