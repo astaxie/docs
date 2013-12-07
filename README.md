@@ -51,8 +51,7 @@ beego 最新的文档
 6. [beego高级编程](advantage/README.md)
 	- [进程内监控](advantage/monitor.md)
 	- [过滤器](advantage/filter.md)
-	- [热升级](advantage/reload.md)
-	
+	- [热升级](advantage/reload.md)	
 7. [应用部署](deploy/README.md)
     - [nginx部署](deploy/nginx.md)
     - [supervisor部署](deploy/supervisor.md)
