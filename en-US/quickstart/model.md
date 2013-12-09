@@ -32,4 +32,4 @@ func LogPV(urls string) bool {
 }
 ```
 
-So if your application is simple enough then you may not need models. But when your application get bigger and more reuseable code and need logic separation the Model is :TODO. In next section we will talk about how to write the View.
+So if your application is simple enough then you may not need models. But when your application get bigger and more reuseable code and need logic separation you must need the models. In next section we will talk about how to write the View.

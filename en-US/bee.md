@@ -1,6 +1,5 @@
 # Introduction to Bee
-Bee is a project for developing Beego rapidly. With Bee we can crate,
-auto reload :TODO, develop, test and deploy easily.
+Bee is a project for developing Beego rapidly. With Bee we can crate, auto compile and reload, develop, test, and deploy easily.
 
 ## Installing Bee
 You can install Bee by this:
@@ -68,8 +67,7 @@ myproject
 ```
 
 ### run
-When we develop Go project ony problem is we need to compile our project
-manually. `bee run` command will supovise :TODO the file system of Beego project by inotify so that we can see the result directly after the modifications for project.
+When we develop Go project ony problem is we need to compile our project manually. `bee run` command will supervise the file system of Beego project by inotify so that we can see the result directly after the modifications for project.
 ```
 bee run
 13-11-25 09:53:04 [INFO] Uses 'myproject' as 'appname'
@@ -155,8 +153,7 @@ ok  	apiproject/tests	0.100s
 ```
 
 ### pack command
-`pack` command is used to compress the project into a single file. Then we can
-deploy the project by uploading and extracting the zip file to the server.
+`pack` command is used to compress the project into a single file. Then we can deploy the project by uploading and extracting the zip file to the server.
 ```
 bee pack
 app path: /gopath/src/apiproject
@@ -182,6 +179,4 @@ drwxr-xr-x  3 astaxie  staff      102 11 25 22:31 tests
 This command doesn't worked yet. In the future it will generate the routers by analyse the function in controllers.
 
 ### bale command
-This command doesn't worked yet. In the future it will compress all the
-static files in to a single binary file. So we don't need to deploy
-:TODO the static files including js, css, images and views when deploy the project 
+This command doesn't worked yet. In the future it will compress all the static files in to a single binary file. So we don't need to deploy the static files including js, css, images and views when deploy the project 

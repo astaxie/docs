@@ -1,8 +1,5 @@
 # Creating the project
-Basically Beego projects are created by `bee` command. Before starting
-please make sure you've already installed `bee` and `beego`. If you
-don't have them yet go to [Installing Beego](install.md) and [Installing
-Bee](../bee.md)
+Basically Beego projects are created by `bee` command. Before starting please make sure you've already installed `bee` and `beego`. If you don't have them yet go to [Installing Beego](install.md) and [Installing Bee](../bee.md)
 
 When you are ready we can get started now. Open your terminal then go to your gopath directory and then type `bee new quickstart`:
 
@@ -39,8 +36,7 @@ Now we created a new Beego project. Here is the structure:
 	└── views
 	    └── index.tpl	
 
-We can tell this is a typical MVC application. `main.go` is the enter
-file. :TODO
+We can tell this is a typical MVC application. `main.go` is the project's starting file.
 
 ## running project
 After creating the project, we can run our project now. Go to the path of the new created project and run `bee run` to run the project. It will also compile the project.

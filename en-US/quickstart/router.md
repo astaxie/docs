@@ -1,5 +1,5 @@
 # Beego's routing rules
-We created a Beego project and ran it in previous section. But how does it work? Let's investigate from the enter :TODO file.
+We created a Beego project and ran it in previous section. But how does it work? Let's investigate from the starting file.
 
 	package main
 	
@@ -32,7 +32,7 @@ Then the user can visit /user to process the logic in UserController.  This is o
 	- Compiling the views 
     Beego will compile the views in views folder when it's starting running so as to avoid compile multiple times. It is more efficient for processing the views.
 	
-  - Starting superviser module :TODO
+  - Starting superviser module
     Beego has a very cool module which is called superviser module. We can see the QPS, cpu, memory, GC, goroutine, thread information by visiting port 8088.
 
   - Listening service port
@@ -40,4 +40,4 @@ Then the user can visit /user to process the logic in UserController.  This is o
 	
   - After everything is running, our server will serve outcoming requests from port 8080 and supervising from port 8088.
 	
-We saw the whole process of running a Beego project and some other mechanical. :TODO Let's start to see how does the Controller work.
+We saw the whole process of running a Beego project and some other functions. Let's start to see how does the Controller work.
