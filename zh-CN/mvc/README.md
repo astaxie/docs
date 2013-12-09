@@ -1,7 +1,7 @@
 # beego的MVC结构介绍
 beego是一个典型的MVC框架，它的整个执行逻辑如下图所示：
 
-![](../images/detail.png)
+![](./../images/detail.png)
 
 通过文字来描述如下：
 
@@ -29,17 +29,17 @@ beego是一个典型的MVC框架，它的整个执行逻辑如下图所示：
 
 接下来就让我们开始进入beego的MVC核心第一步，路由设置：
 
-- [路由设置](router.md)
-- [控制器函数](controller.md)
-- [xsrf过滤](xsrf.md)
-- [session控制](session.md)
-- [flash数据](flash.md)
-- [请求数据处理](params.md)
-- [多种格式数据输出](jsonxml.md)
-- [表单数据验证](validation.md)
-- [模板输出](view.md)
-- [模板函数](template.md)
-- [错误处理](errors.md)
-- [静态文件处理](static.md)
-- [参数配置](config.md)
-- [日志处理](logs.md)
+- [路由设置](./router.md)
+- [控制器函数](./controller.md)
+- [xsrf过滤](./xsrf.md)
+- [session控制](./session.md)
+- [flash数据](./flash.md)
+- [请求数据处理](./params.md)
+- [多种格式数据输出](./jsonxml.md)
+- [表单数据验证](./validation.md)
+- [模板输出](./view.md)
+- [模板函数](./template.md)
+- [错误处理](./errors.md)
+- [静态文件处理](./static.md)
+- [参数配置](./config.md)
+- [日志处理](./logs.md)

@@ -25,7 +25,7 @@
 * Float(key string) (float64, error)
 * DIY(key string) (interface{}, error)
 	
->>>ini配置文件支持section操作，key通过`section.key`的方式获取
+>>>ini配置文件支持section操作，key通过`section::key`的方式获取
 
 >>>例如下面这样的配置文件
 
@@ -33,4 +33,4 @@
 >>>		key1="asta"
 >>>		key2 = "xie"
 
->>> 那么可以通过`iniconf.String("demo.key2")`获取值
+>>> 那么可以通过`iniconf.String("demo::key2")`获取值
