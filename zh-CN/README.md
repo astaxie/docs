@@ -1,11 +1,11 @@
 beego 最新的文档
 ====
 
-1. [beego的介绍](Introduction.md)
-2. [beego的安装升级](install.md)
-    - [beego的安装](install.md)
-	- [beego的升级](install.md)
-	- [bee的安装](bee.md)
+1. [beego的介绍](./Introduction.md)
+2. [beego的安装升级](./install.md)
+    - [beego的安装](./install.md)
+	- [beego的升级](./install.md)
+	- [bee的安装](./bee.md)
 3. [快速入门](quickstart/readme.md)
     - [bee新建项目](quickstart/new.md)	
 	- [路由设置](quickstart/router.md)
