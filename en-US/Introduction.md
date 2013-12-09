@@ -17,7 +17,6 @@ a typical MVC architecture. Here is its executing logic:
 ![](images/flow.png)
 
 ## The project structure of Beego
-## beego项目结构
 
 Here is the folder of a typical Beego project:
 
