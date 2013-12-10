@@ -44,6 +44,13 @@ httplib包里面支持如下的方法返回request对象：
 	GET / HTTP/0.0
 	Host: beego.me
 	User-Agent: beegoServer
+
+## 支持HTTPS请求
+如果请求的网站是https的，那么我们就需要设置client的TLS信息，如下所示：
+
+	httplib.SetTLSClientConfig(&tls.Config{InsecureSkipVerify: true})
+	
+关于如何设置这些信息请访问： http://golang.org/pkg/crypto/tls/#Config			
 	
 ## 支持超时设置
 通过如下接口可以设置请求的超时时间和数据读取时间：
