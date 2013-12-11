@@ -1,3 +1,8 @@
+---
+name: Controller
+sort: 3
+---
+
 # Controller logic
 We learned how can we distribute the users' processes to controllers in previous section. We will learn how to write a controller in this section. Let's start with some code:
 

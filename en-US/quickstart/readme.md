@@ -1,3 +1,9 @@
+---
+root: Quickstart
+name: 快速入门
+sort: 3
+---
+
 # Quickstart
 Beego is a application framework that can develop applications very quickly. Quickstart will guide you to create a Beego project, run it, modify the code and show you how the whole MVC system works. So let's get started. 
 

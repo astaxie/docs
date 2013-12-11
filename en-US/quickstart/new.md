@@ -1,3 +1,8 @@
+---
+name: Bee New Project
+sort: 1
+---
+
 # Creating the project
 Basically Beego projects are created by `bee` command. Before starting please make sure you've already installed `bee` and `beego`. If you don't have them yet go to [Installing Beego](install.md) and [Installing Bee](../bee.md)
 

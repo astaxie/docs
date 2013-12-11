@@ -1,3 +1,8 @@
+---
+name: supervisor部署
+sort: 2
+---
+
 # Supervisord
 Supervisord是用Python实现的一款非常实用的进程管理工具，supervisord还要求管理的程序是非daemon程序，supervisord会帮你把它转成daemon程序，因此如果用supervisord来管理nginx的话，必须在nginx的配置文件里添加一行设置daemon off让nginx以非daemon方式启动。
 

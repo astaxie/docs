@@ -1,3 +1,8 @@
+---
+name: Routing rules
+sort: 2
+---
+
 # Beego's routing rules
 We created a Beego project and ran it in previous section. But how does it work? Let's investigate from the starting file.
 

@@ -1,3 +1,9 @@
+---
+root: true
+name: beego高级编程
+sort: 6
+---
+
 # beego 高级编程
 前面介绍了beego的一些基础信息，如果你想通过beego使用更多高级的功能，那么这里就是你需要的资料。
 

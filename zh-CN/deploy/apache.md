@@ -1,4 +1,9 @@
-## Apache配置
+---
+name: apache部署
+sort: 4
+---
+
+# Apache配置
 
 apache和nginx的实现原理一样，都是做一个反向代理，把请求向后端传递，配置如下所示：
 

@@ -1,4 +1,10 @@
+---
+name: Controller编写
+sort: 3
+---
+
 # controller逻辑
+
 前面我们了解了如何把用户的请求分发到控制器，这小节我们就介绍大家如何来写控制器，首先我们还是从源码分析入手：
 
 ```
@@ -18,7 +24,9 @@ func (this *MainController) Get() {
         this.TplNames = "index.tpl"
 }
 ```
+
 上面的代码显示首先我们什么了一个控制器`MainController`，这个控制器里面内嵌了`beego.Controller`，这就是Go的继承方式，也就是`MainController`继承了所有`beego.Controller`的方法。
+
 而`beego.Controller`拥有很多方法，其中包括`Init`、`Prepare`、`Post`、`Get`、`Delete`、`Head`等方法。我们可以通过重写的方式来实现这些方法，而我们上面的代码就是重写了`Get`方法。
 
 我们先前介绍过beego是一个RESTFul的框架，所以我们的请求默认是执行对应`req.Method`的方法，例如浏览器的是`GET`请求，那么默认就会执行`MainController`下的`Get`方法。这样我们上面的Get方法就会被执行到，这样就进入了我们的逻辑处理。

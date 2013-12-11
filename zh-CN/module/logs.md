@@ -1,3 +1,8 @@
+---
+name: logs模块
+sort: 3
+---
+
 # 日志处理
 这是一个用来处理日志的库，它的设计思路来自于`database/sql`，目前支持的引擎有file、console、net、smtp，可以通过如下方式进行安装：
 

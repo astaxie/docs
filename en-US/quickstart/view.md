@@ -1,3 +1,8 @@
+---
+name: View
+sort: 5
+---
+
 # Creating views
 When we create Controller we have something like `this.TplNames = "index.tpl"`. The view file support `tpl` and `html` extensions by default. You can call `beego.AddTemplateExt` to set other extensions. So how can views show the data we need? Beego is using the default template engine of Go so it's same as the Go templates. You can learn how to use Go template from [Build web application with golang](https://github.com/astaxie/build-web-application-with-golang/blob/master/ebook/07.4.md)
 

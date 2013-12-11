@@ -1,3 +1,8 @@
+---
+name: toolbox模块
+sort: 6
+---
+
 # 核心工具模块
 这个模块主要是参考了Dropwizard框架，是一位用户提醒我说有这么一个框架，然后里面实现一些很酷的东西，那个[issue](https://github.com/astaxie/beego/issues/128)详细描述了改功能的雏形，然后就在参考该功能的情况下增加了一些额外的很酷的功能，接下来我讲一一，介绍这个模块中的几个功能：健康检查、性能调试、访问统计、计划任务。
 
@@ -7,6 +12,7 @@
 
 ## healthcheck
 监控检查是用于当你应用于产品环境中进程，检查当前的状态是否正常，例如你要检查当前数据库是否可用，如下例子所示：
+
 ```
 type DatabaseCheck struct {
 }
@@ -20,6 +26,7 @@ func (dc *DatabaseCheck) Check() error {
 }
 ```
 然后就可以通过如下方式增加检测项：
+
 ```
 toolbox.AddHealthCheck("database",&DatabaseCheck{})
 ```

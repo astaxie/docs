@@ -1,3 +1,8 @@
+---
+name: Model
+sort: 4
+---
+
 # Creating models
 
 We know we are using database a lot in web applications so model is usually handle these jobs. There is no demo for Model in our `bee new` project. But there are demos for model in `bee api` project. Basically, if your application is simple enough the Controller can handle everything. If there are some reuseable logic we can extract them out into a module. The Model is the result of logic extracting. Usually Model will handling some data reading and writing. Here is some code:

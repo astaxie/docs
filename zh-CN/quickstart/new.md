@@ -1,5 +1,10 @@
+---
+name: bee新建项目
+sort: 1
+---
+
 # 创建项目
-beego的项目基本都是通过`bee`命令来创建的，所以在创建项目之前确保你已经安装了bee和beego，如果你还没有安装，那么请访问[beego安装](install.md)和[bee安装](../bee.md)。
+beego的项目基本都是通过`bee`命令来创建的，所以在创建项目之前确保你已经安装了bee和beego，如果你还没有安装，那么请访问[beego安装](../install/install.md)和[bee安装](../install/bee.md)。
 
 现在一切就绪我们就可以开始创建项目了，打开终端，进入gopath所在的目录：
 

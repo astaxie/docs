@@ -1,3 +1,8 @@
+---
+name: session模块
+sort: 1
+---
+
 # session介绍
 session模块是用来存储客户端用户，session模块目前只支持cookie方式的请求，如果客户端不支持cookie，那么就无法使用该模块。
 

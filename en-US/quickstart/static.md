@@ -1,3 +1,8 @@
+---
+name: Static files
+sort: 6
+---
+
 # Handling static files
 We talked about how to render a view. Usually there are lots of static files including images, js, css and so on. Our Beego project has already include these folders.
 ```

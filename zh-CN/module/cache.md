@@ -1,3 +1,8 @@
+---
+name: cache模块
+sort: 2
+---
+
 # 缓存模块
 beego的cache模块是用来做数据缓存的，设计思路来自于`database/sql`，目前支持file、memcache、memory和redis四种引擎，安装方式如下：
 

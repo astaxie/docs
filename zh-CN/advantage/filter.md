@@ -1,3 +1,8 @@
+---
+name: 过滤器
+sort: 2
+---
+
 # 过滤器
 
 beego 支持自定义过滤中间件，例如安全验证，强制跳转等。
@@ -28,6 +33,7 @@ var FilterUser = func(ctx *context.Context) {
 
 beego.AddFilter("*","AfterStatic",FilterUser)
 ```
+
 >>>这里需要特别注意使用session的Filter必须在AfterStatic之后才能获取，因为session没有在这之前初始化
 
 还可以通过正则路由进行过滤，如果匹配参数就执行：
