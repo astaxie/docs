@@ -1,6 +1,6 @@
 ---
-root: Quickstart
-name: 快速入门
+root: true
+name: Quickstart
 sort: 3
 ---
 
