@@ -187,3 +187,4 @@ func (this *RController) Prepare() {
     this.StopRun()
 }
 ```
+>>> 调用StopRun之后，如果你还定义了Finish函数就不会再执行，如果需要释放资源，那么请自己在调用StopRun之前手工调用Finish函数。
