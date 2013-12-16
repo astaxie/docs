@@ -1,6 +1,5 @@
 ---
 root: Quickstart
-name: 快速入门
 sort: 3
 ---
 
