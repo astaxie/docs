@@ -1,5 +1,6 @@
 ---
-root: Quickstart
+root: true
+name: Quickstart
 sort: 3
 ---
 
