@@ -172,3 +172,18 @@ func (this *BaseAdminRouter) Post(){
 ```
 
 这样我们的执行器执行的逻辑是这样的，首先执行Prepare，这个就是Go语言中strcut中寻找方法的顺序，依次往父类寻找。执行`BaseAdminRouter`时，查找他是否有`Prepare`方法，没有就寻找`baseRouter`，找到了，那么就执行逻辑，然后在`baseRouter`里面的`this.AppController`即为当前执行的控制器`BaseAdminRouter`，因为会执行`BaseAdminRouter.NestPrepare`方法。然后开始执行相应的Get方法或者Post方法。
+
+## 提前终止运行
+我们应用中经常会遇到这样的情况，在Prepare阶段进行判断，如果用户认证不通过，就输出一段信息，然后直接中止进程，之后的Post、Get之类的不再执行，那么如何终止呢？可以使用`StopRun`来终止执行逻辑，可以在任意的地方执行。
+
+```
+type RController struct {
+    beego.Controller
+}
+
+func (this *RController) Prepare() {
+    this.Data["json"] = "astaxie"
+    this.ServeJson()
+    this.StopRun()
+}
+```
