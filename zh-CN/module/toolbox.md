@@ -252,3 +252,62 @@ spec格式是参照crontab做的，详细的解释如下所示：
 //	0 2 8-20/3 * * *　　　　　　             8:02,11:02,14:02,17:02,20:02 执行
 //	0 30 5 1,15 * *　　　　　　              1日 和 15日的 5:30 执行
 ```
+
+## 调试模块
+我们经常需要打印一些参数进行调试，但是默认的参数打印总是不是很完美，也没办法定位代码行之类的，所有beego的toolbox模块进行了debug模块的开发，主要包括了两个函数：
+
+- Display()  直接打印结果到console
+- GetDisplayString() 返回打印的字符串
+
+两个函数的功能一模一样，第一个是直接打印到console，第二个是返回字符串，方便用户存储到日志或者其他存储。
+
+使用很方便，是key/value串出现的，如下示例：
+
+	Display("v1", 1, "v2", 2, "v3", 3)
+	
+打印结果如下：
+
+	2013/12/16 23:48:41 [Debug] at TestPrint() [/Users/astaxie/github/beego/toolbox/debug_test.go:13]
+	
+	[Variables]
+	v1 = 1
+	v2 = 2
+	v3 = 3	
+	
+指针类型的打印如下：
+
+	type mytype struct {
+		next *mytype
+		prev *mytype
+	}	
+	
+	var v1 = new(mytype)
+	var v2 = new(mytype)
+
+	v1.prev = nil
+	v1.next = v2
+
+	v2.prev = v1
+	v2.next = nil
+
+	Display("v1", v1, "v2", v2)
+
+打印结果如下：
+
+	2013/12/16 23:48:41 [Debug] at TestPrintPoint() [/Users/astaxie/github/beego/toolbox/debug_test.go:26]
+
+	[Variables]
+	v1 = &toolbox.mytype{
+	    next: &toolbox.mytype{
+	        next: nil,
+	        prev: 0x210335420,
+	    },
+	    prev: nil,
+	}
+	v2 = &toolbox.mytype{
+	    next: nil,
+	    prev: &toolbox.mytype{
+	        next: 0x210335430,
+	        prev: nil,
+	    },
+	}		
