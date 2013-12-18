@@ -7,7 +7,7 @@ sort: 9
 
 Testing code:
 
-* Model difinition [models_test.go](https://github.com/astaxie/beego/blob/master/orm/models_test.go)
+* Model definition [models_test.go](https://github.com/astaxie/beego/blob/master/orm/models_test.go)
 * Test cases [orm_test.go](https://github.com/astaxie/beego/blob/master/orm/orm_test.go)
 
 #### MySQL

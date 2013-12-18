@@ -33,7 +33,7 @@ The `this.Abort("401")` won't execute any more and it will show use this page:
 
 ![](../../images/401.png)
 
-Beego supports 404, 401, 403, 500, 503 error handling by default. You can also define customer error handling page. For example redifined 404 page:
+Beego supports 404, 401, 403, 500, 503 error handling by default. You can also define customer error handling page. For example redefined 404 page:
 
 ```go
 func page_not_found(rw http.ResponseWriter, r *http.Request){
@@ -50,7 +50,7 @@ func main() {
 }
 ```
 
-We can difine our own `404.html` to handle 404 error.
+We can define our own `404.html` to handle 404 error.
 
 Another cool feature of Go is it supports customized string error handling function, Such as the code below, it registered a database error page:
 
