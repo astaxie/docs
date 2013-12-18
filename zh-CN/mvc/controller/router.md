@@ -59,15 +59,15 @@ sort: 2
 	this.Ctx.Input.Param(":ext")
 
 ## 自定义方法及 RESTful 规则
-上面列举的是默认的请求方法名（请求的 method 和函数名一致，例如 `GET` 请求执行 `Get` 函数，`POST` 请求执行 Post 函数），如果用户期望自定义函数名，那么可以使用如下方式：
+上面列举的是默认的请求方法名（请求的 method 和函数名一致，例如 `GET` 请求执行 `Get` 函数，`POST` 请求执行 `Post` 函数），如果用户期望自定义函数名，那么可以使用如下方式：
 
 	beego.Router("/",&IndexController{},"*:Index")
 使用第三个参数，第三个参数就是用来设置对应 method 到函数名，定义如下
 
-* *表示任意的 method 都执行该函数
+* `*`表示任意的 method 都执行该函数
 * 使用 httpmethod:funcname 格式来展示
-* 多个不同的格式使用 ; 分割
-* 多个 method 对应同一个 funcname，method 之间通过 , 来分割
+* 多个不同的格式使用 `;` 分割
+* 多个 method 对应同一个 funcname，method 之间通过 `,` 来分割
 
 以下是一个 RESTful 的设计示例：
 
