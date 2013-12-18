@@ -24,7 +24,7 @@ sort: 2
 
 		beego.Router("/user", &controllers.UserController{})	
 		
-	这样用户就可以通过访问`/user`去执行`UserController`的逻辑。这就是我们所谓的路由，更多更复杂的路由规则请查询[beego路由设置](../mvc/router.md)
+	这样用户就可以通过访问`/user`去执行`UserController`的逻辑。这就是我们所谓的路由，更多更复杂的路由规则请查询[beego路由设置](../mvc/controller/router.md)
 	
 2. beego.Run执行之后，我们看到的效果好像只是监听服务端口这个过程，但是它内部做了很多事情：
 	- 解析配置文件
