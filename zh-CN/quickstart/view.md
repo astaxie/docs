@@ -4,7 +4,7 @@ sort: 5
 ---
 
 # View编写
-在前面编写Controller的时候，我们在Get里面写过这样的语句`this.TplNames = "index.tpl"`，设置显示的模板文件，默认支持`tpl`和`html`的后缀名，如果想设置其他后缀你可以调用`beego.AddTemplateExt`接口设置，那么模板如何来显示相应的数据呢？beego采用了Go语言默认的模板引擎，所以他的显示和Go的模板语法一样，Go模板的详细使用方法请参考[Go Web 编程 模板使用指南](https://github.com/astaxie/build-web-application-with-golang/blob/master/ebook/07.4)
+在前面编写Controller的时候，我们在Get里面写过这样的语句`this.TplNames = "index.tpl"`，设置显示的模板文件，默认支持`tpl`和`html`的后缀名，如果想设置其他后缀你可以调用`beego.AddTemplateExt`接口设置，那么模板如何来显示相应的数据呢？beego采用了Go语言默认的模板引擎，所以他的显示和Go的模板语法一样，Go模板的详细使用方法请参考[Go Web 编程 模板使用指南](https://github.com/astaxie/build-web-application-with-golang/blob/master/ebook/07.4.md)
 
 我们看看快速入门里面的代码（去掉了css样式）：
 
