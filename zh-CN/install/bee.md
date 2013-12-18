@@ -192,7 +192,7 @@ drwxr-xr-x  3 astaxie  staff      102 11 25 22:31 tests
 
 ### router命令
 
-这个目录目前还没有作用，将来会用来分析controller的方法，自动生成路由
+这个命令目前还没有作用，将来会用来分析controller的方法，自动生成路由
 
 ### bale命令
 

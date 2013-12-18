@@ -85,7 +85,7 @@ Beego has many configurable variables. Let's have a look of this variables. It w
   Use auto render or not, true by default. Should set it to false for API application, no need to render template.
 
 * RecoverPanic
-  Recover from panic or not, tur by default. It will recover from exceptions whiout exit application by exceptions.
+  Recover from panic or not, ture by default. It will recover from exceptions without exiting application.
 
 * ViewsPath
   The path of templates, views by default.

@@ -62,7 +62,7 @@ Filter / Exclude / Condition expr 的默认值
 qs.Filter("name", "slene") // WHERE name = 'slene'
 qs.Filter("name__exact", "slene") // WHERE name = 'slene'
 // 使用 = 匹配，大小写是否敏感取决于数据表使用的 collation
-qs.Filter("profile", nil) // WHERE profile_id IS NULL
+qs.Filter("profile_id", nil) // WHERE profile_id IS NULL
 ```
 
 ### iexact
