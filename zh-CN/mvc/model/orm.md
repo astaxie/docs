@@ -158,7 +158,7 @@ ORM 在进行 RegisterDataBase 的同时，会获取数据库使用的时区，�
 
 如果使用 orm.QuerySeter 进行高级查询的话，这个是必须的。
 
-反之，如果只使用 Raw 查询和 map struct，是无需这一步的。您可以去查看 [Raw SQL 查询](Models_RawSQL)
+反之，如果只使用 Raw 查询和 map struct，是无需这一步的。您可以去查看 [Raw SQL 查询](rawsql.md)
 
 #### RegisterModel
 
@@ -188,7 +188,7 @@ RegisterModel 也可以同时注册多个 model
 orm.RegisterModel(new(User), new(Profile), new(Post))
 ```
 
-详细的 struct 定义请查看文档 [模型定义](Models_Models)
+详细的 struct 定义请查看文档 [模型定义](models.md)
 
 #### RegisterModelWithPrefix
 
@@ -234,7 +234,7 @@ o = orm.NewOrm() // 创建一个 Ormer
 
 #### QueryTable
 
-传入表名，或者 Model 对象，返回一个 [QuerySeter](Models_Query#queryseter)
+传入表名，或者 Model 对象，返回一个 [QuerySeter](query.md)
 
 ```go
 o := orm.NewOrm()
@@ -267,7 +267,7 @@ o2.Using("db2")
 
 使用 sql 语句直接进行操作
 
-Raw 函数，返回一个 [RawSeter](Models_RawSQL) 用以对设置的 sql 语句和参数进行操作
+Raw 函数，返回一个 [RawSeter](rawsql.md) 用以对设置的 sql 语句和参数进行操作
 
 ```go
 o := NewOrm()
