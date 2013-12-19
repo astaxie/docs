@@ -5,7 +5,7 @@ sort: 7
 
 # 模型定义
 
-复杂的模型定义不是必须的，此功能用作数据库数据转换和[自动建表](Models_Cmd#自动建表)
+复杂的模型定义不是必须的，此功能用作数据库数据转换和[自动建表](cmd.md#自动建表)
 
 默认的表名规则，使用驼峰转蛇形：
 
@@ -28,7 +28,7 @@ func (u *User) TableName() string {
 }
 ```
 
-如果[前缀设置](Models_ORM#registermodelwithprefix)为`prefix_`那么表名为：prefix_auth_user
+如果[前缀设置](orm.md#registermodelwithprefix)为`prefix_`那么表名为：prefix_auth_user
 
 ## 自定义索引
 

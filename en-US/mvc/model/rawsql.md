@@ -77,7 +77,7 @@ var created time.Time
 o.Raw("SELECT id, NULL, name, age, created FROM user WHERE id = ?", 1).QueryRow(&user, &age, &created)
 ```
 
-While mapping struct, it can [ignore fields](Models_Models#忽略字段). If you just need ignore fields temporary, you can use `NULL` in `SELECT`.
+While mapping struct, it can [ignore fields](models.md#忽略字段). If you just need ignore fields temporary, you can use `NULL` in `SELECT`.
 
 Supports NULL object test
 

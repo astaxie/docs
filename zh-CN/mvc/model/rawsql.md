@@ -77,7 +77,7 @@ var created time.Time
 o.Raw("SELECT id, NULL, name, age, created FROM user WHERE id = ?", 1).QueryRow(&user, &age, &created)
 ```
 
-struct 进行 mapper 的时候，可以进行[忽略字段](Models_Models#忽略字段)，如果有需要临时忽略的 Field 可以在 SELECT 中使用 NULL
+struct 进行 mapper 的时候，可以进行[忽略字段](models.md#忽略字段)，如果有需要临时忽略的 Field 可以在 SELECT 中使用 NULL
 
 支持判断 NULL 对象
 

@@ -513,7 +513,7 @@ if err == nil {
 
 ## Relational Query
 
-Let's see how to do Relational Query by looking at [Model Definition](Models_ORM)
+Let's see how to do Relational Query by looking at [Model Definition](orm.md)
 
 #### User and Profile is OnToOne relation
 
