@@ -36,14 +36,14 @@ beego ORM 是一个强大的 Go 语言 ORM 框架。她的灵感主要来自 Dja
 
 ## 修改日志
 
-* 2013-10-14: [自动载入关系字段](Models_Query#载入关系字段)，[多对多关系操作](Models_Query#多对多关系操作)，完善[关系查询](Models_Query#关系查询)
-* 2013-10-09: [原子操作更新值](Models_Query#update)
-* 2013-09-22: [RegisterDataBase](Models_ORM#registerdatabase) maxIdle / maxConn 设置为可选参数, MySQL [自定义引擎](Models_Models#自定义引擎)
-* 2013-09-16: 支持设置 空闲链接数 和 最大链接数 [SetMaxIdleConns](Models_ORM#setmaxidleconns) / [SetMaxOpenConns](Models_ORM#SetMaxOpenConns)
-* 2013-09-12: [Read](Models_Object#read) 支持设定条件字段 [Update](Models_Object#update) / [All](Models_Query#all) / [One](Models_Query#one) 支持设定返回字段
-* 2013-09-09: Raw SQL [QueryRow/QueryRows](Models_RawSQL#queryrow) 功能完成
-* 2013-08-27: [自动建表](Models_Cmd#自动建表)继续改进
-* 2013-08-19: [自动建表](Models_Cmd#自动建表)功能完成
+* 2013-10-14: [自动载入关系字段](query.md#载入关系字段)，[多对多关系操作](query.md#多对多关系操作)，完善[关系查询](query.md#关系查询)
+* 2013-10-09: [原子操作更新值](query.md#update)
+* 2013-09-22: [RegisterDataBase](orm.md#registerdatabase) maxIdle / maxConn 设置为可选参数, MySQL [自定义引擎](models.md#自定义引擎)
+* 2013-09-16: 支持设置 空闲链接数 和 最大链接数 [SetMaxIdleConns](orm.md#setmaxidleconns) / [SetMaxOpenConns](orm.md#SetMaxOpenConns)
+* 2013-09-12: [Read](object.md#read) 支持设定条件字段 [Update](object.md#update) / [All](query.md#all) / [One](query.md#one) 支持设定返回字段
+* 2013-09-09: Raw SQL [QueryRow/QueryRows](rawsql.md#queryrow) 功能完成
+* 2013-08-27: [自动建表](cmd.md#自动建表)继续改进
+* 2013-08-19: [自动建表](cmd.md#自动建表)功能完成
 * 2013-08-13: 更新数据库类型测试
 * 2013-08-13: 增加 Go 类型支持，包括 int8、uint8、byte、rune 等
 * 2013-08-13: 增强 date／datetime 的时区支持
@@ -163,33 +163,33 @@ func main() {
 
 ## 文档索引
 
-1. [Orm 使用方法](Models_ORM)
-	- [数据库的设置](Models_ORM#数据库的设置)
-		* [驱动类型设置](Models_ORM#registerdriver)
-		* [参数设置](Models_ORM#registerdatabase)
-		* [时区设置](Models_ORM#时区设置)
-	- [注册模型](Models_ORM#注册模型)
-	- [ORM 接口使用](Models_ORM#orm-接口使用)
-	- [调试模式打印查询语句](Models_ORM#调试模式打印查询语句)
-2. [对象的CRUD操作](Models_Object)
-3. [高级查询](Models_Query)
-	- [使用的表达式语法](Models_Query#expr)
-	- [支持的操作符号](Models_Query#operators)
-	- [高级查询接口使用](Models_Query#高级查询接口使用)
-	- [关系查询](Models_Query#关系查询)
-	- [载入关系字段](Models_Query#载入关系字段)
-	- [多对多关系操作](Models_Query#多对多关系操作)
-4. [使用SQL语句进行查询](Models_RawSQL)
-5. [事务处理](Models_Transaction)
-6. [模型定义](Models_Models)
-	- [自定义表名](Models_Models#自定义表名)
-	- [自定义引擎](Models_Models#自定义引擎)
-	- [设置参数](Models_Models#设置参数)
-	- [表关系设置](Models_Models#表关系设置)
-	- [模型字段与数据库类型的对应](Models_Models#模型字段与数据库类型的对应)
-7. [命令模式](Models_Cmd)
-	- [自动建表](Models_Cmd#自动建表)
-	- [打印建表SQL](Models_Cmd#打印建表sql)
-8. [Test ORM](Models_Test)
-9. [自定义字段](Models_Fields)
-10. [FAQ](Models_Faq)
+1. [Orm 使用方法](orm.md)
+	- [数据库的设置](orm.md#数据库的设置)
+		* [驱动类型设置](orm.md#registerdriver)
+		* [参数设置](orm.md#registerdatabase)
+		* [时区设置](orm.md#时区设置)
+	- [注册模型](orm.md#注册模型)
+	- [ORM 接口使用](orm.md#orm-接口使用)
+	- [调试模式打印查询语句](orm.md#调试模式打印查询语句)
+2. [对象的CRUD操作](object.md)
+3. [高级查询](query.md)
+	- [使用的表达式语法](query.md#expr)
+	- [支持的操作符号](query.md#operators)
+	- [高级查询接口使用](query.md#高级查询接口使用)
+	- [关系查询](query.md#关系查询)
+	- [载入关系字段](query.md#载入关系字段)
+	- [多对多关系操作](query.md#多对多关系操作)
+4. [使用SQL语句进行查询](rawsql.md)
+5. [事务处理](transaction.md)
+6. [模型定义](models.md)
+	- [自定义表名](models.md#自定义表名)
+	- [自定义引擎](models.md#自定义引擎)
+	- [设置参数](models.md#设置参数)
+	- [表关系设置](models.md#表关系设置)
+	- [模型字段与数据库类型的对应](models.md#模型字段与数据库类型的对应)
+7. [命令模式](cmd.md)
+	- [自动建表](cmd.md#自动建表)
+	- [打印建表SQL](cmd.md#打印建表sql)
+8. [Test ORM](test.md)
+9. [自定义字段](custom_fields.md)
+10. [FAQ](faq.md)
