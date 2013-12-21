@@ -155,7 +155,7 @@ ORM will get timezone of database while `RegisterDataBase`. When set or get time
 
 This is compulsory if use orm.QuerySeter for advanced query.
 
-Otherwise you don't need to do this if you use raw SQL query and map struct only. [Raw SQL Query](Models_RawSQL)
+Otherwise you don't need to do this if you use raw SQL query and map struct only. [Raw SQL Query](rawsql.md)
 
 #### RegisterModel
 
@@ -184,7 +184,7 @@ RegisterModel can register multiple model at the same time:
 orm.RegisterModel(new(User), new(Profile), new(Post))
 ```
 
-For detailed struct definination, see [Model define](Models_Models)
+For detailed struct definination, see [Model define](models.md)
 
 #### RegisterModelWithPrefix
 
@@ -210,17 +210,17 @@ So don't use global Ormer object if you need to switch databas or use transactio
 
 
 * type Ormer interface {
-	* [Read(interface{}, ...string) error](Models_Object#read)
-	* [Insert(interface{}) (int64, error)](Models_Object#insert)
-	* [Update(interface{}, ...string) (int64, error)](Models_Object#update)
-	* [Delete(interface{}) (int64, error)](Models_Object#delete)
-	* [LoadRelated(interface{}, string, ...interface{}) (int64, error)](Models_Query#载入关系字段)
-	* [QueryM2M(interface{}, string) QueryM2Mer](Models_Query#多对多关系操作)
+	* [Read(interface{}, ...string) error](object.md#read)
+	* [Insert(interface{}) (int64, error)](object.md#insert)
+	* [Update(interface{}, ...string) (int64, error)](object.md#update)
+	* [Delete(interface{}) (int64, error)](object.md#delete)
+	* [LoadRelated(interface{}, string, ...interface{}) (int64, error)](query.md#载入关系字段)
+	* [QueryM2M(interface{}, string) QueryM2Mer](query.md#多对多关系操作)
 	* [QueryTable(interface{}) QuerySeter](#querytable)
 	* [Using(string) error](#using)
-	* [Begin() error](Models_Transaction)
-	* [Commit() error](Models_Transaction)
-	* [Rollback() error](Models_Transaction)
+	* [Begin() error](transaction.md)
+	* [Commit() error](transaction.md)
+	* [Rollback() error](transaction.md)
 	* [Raw(string, ...interface{}) RawSeter](#raw)
 	* [Driver() Driver](#driver)
 * }
@@ -228,7 +228,7 @@ So don't use global Ormer object if you need to switch databas or use transactio
 
 #### QueryTable
 
-Pass in a table name or a Model object and return a [QuerySeter](Models_Query#queryseter)
+Pass in a table name or a Model object and return a [QuerySeter](query.md#queryseter)
 
 ```go
 o := orm.NewOrm()
@@ -261,7 +261,7 @@ Use `default` database, no need to use `Using`
 
 Use raw SQL query:
 
-Raw function will return a [RawSeter](Models_RawSQL) to execute query with the SQL and params provided:
+Raw function will return a [RawSeter](rawsql.md) to execute query with the SQL and params provided:
 
 ```go
 o := NewOrm()

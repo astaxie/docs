@@ -5,7 +5,7 @@ sort: 0
 ---
 
 # What is Beego
-Beego is a http framework for developing Go application rapidly. It can be used for developing API, Web app, backend services quickly. It is a RESTFul framework.  It is inspired by tornado, sinatra and flask and integrated some Go features such as interface, struct inheritcace.  
+Beego is a http framework for developing Go application rapidly. It can be used for developing API, Web app, backend services quickly. It is a RESTFul framework.  It is inspired by tornado, sinatra and flask and integrated some Go features such as interface, struct inheritance.  
 
 ## The Architecture of Beego
 Here is the architecture of Beego:
@@ -13,7 +13,7 @@ Here is the architecture of Beego:
 
 ![](../images/architecture.png)
 
-Beego is build upon 8 independent modules. It's loose coupling framework. Beego is designed for modular programming. You can still use all these modules without using Beego's http logic. You can use cache module to handle your cache, you can use logs module for logging and you can use config module for processing file in many format. So you can use all these modules not only in Beego but also in many other applications such as socket games. This is one of the reasons that Beego became popular. If you know Lego you should know all magnificent modles are build of many small pieces. In the philosophy of Beego these modules are small piece of building blocks and the magnificent model is Beego. We will talK about more about the modules later.
+Beego is build upon 8 independent modules. It's loose coupling framework. Beego is designed for modular programming. You can still use all these modules without using Beego's http logic. You can use cache module to handle your cache, you can use logs module for logging and you can use config module for processing file in many format. So you can use all these modules not only in Beego but also in many other applications such as socket games. This is one of the reasons that Beego became popular. If you know Lego you should know all magnificent modles are build of many small pieces. In the philosophy of Beego these modules are small piece of building blocks and the magnificent model is Beego. We will talk about more about the modules later.
 
 ## The executing logic of Beego
 

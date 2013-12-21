@@ -22,7 +22,7 @@ fmt.Println(o.Read(user))
 fmt.Println(o.Delete(user))
 ```
 
-如果需要通过条件查询获取对象，请参见[高级查询](Models_Query#all)
+如果需要通过条件查询获取对象，请参见[高级查询](query.md#all)
 
 ## Read
 
@@ -51,7 +51,7 @@ err = o.Read(&user, "Name")
 
 对象的其他字段值将会是对应类型的默认值
 
-复杂的单个对象查询参见 [One](Models_Query#one)
+复杂的单个对象查询参见 [One](query.md#one)
 
 ## Insert
 
@@ -88,7 +88,7 @@ o.Update(&user, "Name")
 ...
 ```
 
-根据复杂条件更新字段值参见 [Update](Models_Query#update)
+根据复杂条件更新字段值参见 [Update](query.md#update)
 
 ## Delete
 

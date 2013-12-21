@@ -216,17 +216,17 @@ o = orm.NewOrm() // 创建一个 Ormer
 
 
 * type Ormer interface {
-	* [Read(interface{}, ...string) error](Models_Object#read)
-	* [Insert(interface{}) (int64, error)](Models_Object#insert)
-	* [Update(interface{}, ...string) (int64, error)](Models_Object#update)
-	* [Delete(interface{}) (int64, error)](Models_Object#delete)
-	* [LoadRelated(interface{}, string, ...interface{}) (int64, error)](Models_Query#载入关系字段)
-	* [QueryM2M(interface{}, string) QueryM2Mer](Models_Query#多对多关系操作)
+	* [Read(interface{}, ...string) error](object.md#read)
+	* [Insert(interface{}) (int64, error)](object.md#insert)
+	* [Update(interface{}, ...string) (int64, error)](object.md#update)
+	* [Delete(interface{}) (int64, error)](object.md#delete)
+	* [LoadRelated(interface{}, string, ...interface{}) (int64, error)](query.md#载入关系字段)
+	* [QueryM2M(interface{}, string) QueryM2Mer](query.md#多对多关系操作)
 	* [QueryTable(interface{}) QuerySeter](#querytable)
 	* [Using(string) error](#using)
-	* [Begin() error](Models_Transaction)
-	* [Commit() error](Models_Transaction)
-	* [Rollback() error](Models_Transaction)
+	* [Begin() error](transaction.md)
+	* [Commit() error](transaction.md)
+	* [Rollback() error](transaction.md)
 	* [Raw(string, ...interface{}) RawSeter](#raw)
 	* [Driver() Driver](#driver)
 * }

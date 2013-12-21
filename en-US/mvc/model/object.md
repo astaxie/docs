@@ -20,7 +20,7 @@ fmt.Println(o.Read(user))
 fmt.Println(o.Delete(user))
 ```
 
-To query the object by conditions see [Query in advance](Models_Query#all)
+To query the object by conditions see [Query in advance](query.md#all)
 
 ## Read
 
@@ -48,7 +48,7 @@ err = o.Read(&user, "Name")
 ```
 Other fields of the object are the default value according to the field type.
 
-For detailed single object query, see [One](Models_Query#one)
+For detailed single object query, see [One](query.md#one)
 
 ## Insert
 
@@ -85,7 +85,7 @@ o.Update(&user, "Name")
 ...
 ```
 
-For detailed object update, see [One](Models_Query#one)
+For detailed object update, see [One](query.md#one)
 
 ## Delete
 

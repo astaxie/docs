@@ -6,7 +6,7 @@ sort: 7
 # Model Definition
 
 The complicated model definition is not compulsory. It's　used for
-database data converting and [Scheme Generating](Models_Cmd#自动建表)
+database data converting and [Scheme Generating](cmd.md#自动建表)
 
 Table name conversion :TODO is camel case to snake case.
 
@@ -30,7 +30,7 @@ func (u *User) TableName() string {
 }
 ```
 
-If set [prefix](Models_ORM#registermodelwithprefix) to `prefix_`, the table name will be `prefix_auth_user`.
+If set [prefix](orm.md#registermodelwithprefix) to `prefix_`, the table name will be `prefix_auth_user`.
 
 ## Custom index
 

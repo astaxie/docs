@@ -512,7 +512,7 @@ if err == nil {
 
 ## 关系查询
 
-以例子里的[模型定义](Models_ORM)来看下怎么进行关系查询
+以例子里的[模型定义](orm.md)来看下怎么进行关系查询
 
 #### User 和 Profile 是 OneToOne 的关系
 
