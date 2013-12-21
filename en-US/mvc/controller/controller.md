@@ -131,8 +131,7 @@ func (this *baseRouter) Prepare() {
 }
 ```
 
-In the example above, it defined base class and initialized some variables. It will test if the executing Controller is a implementing of NestPrepareer, if it is call the method of sub class. Let's see the implementation of NestPreparer: :TODO Init
-上面定义了基类，大概是初始化了一些变量，最后有一个Init函数中那个app的应用，判断当前运行的Controller是否是NestPreparer实现，如果是的话调用子类的方法，下面我们来看一下NestPreparer的实现：
+In the example above, it defined base class and initialized some variables. It will test if the executing Controller is a implementing of NestPrepareer, if it is call the method of sub class. Let's see the implementation of `NestPreparer`:
 
 ```
 type BaseAdminRouter struct {
@@ -173,14 +172,4 @@ func (this *BaseAdminRouter) Post(){
 }
 ```
 
-Here is our logic of it: executes `Prepare`. It is he order of Go finding methods in struct, finding towards parent classes one by one. While execute `BaseAdminRouter`, checks if it has `Prepare` method. If no, keep finding `baseRouter`. :TODO
-这样我们的执行器执行的逻辑是这样的，首先执行Prepare，这个就是Go语言中strcut中寻找方法的顺序，依次往父类寻找。执行`BaseAdminRouter`时，查找他是否有`Prepare`方法，没有就寻找`baseRouter`，找到了，那么就执行逻辑，然后在`baseRouter`里面的`this.AppController`即为当前执行的控制器`BaseAdminRouter`，因为会执行`BaseAdminRouter.NestPrepare`方法。然后开始执行相应的Get方法或者Post方法。
-
-
-
-
-
-
-
-
-
+Here is our logic of it: executes `Prepare` first. It is the order of Go to find methods in struct, finding towards parent classes one by one. While execute `BaseAdminRouter`, checks if it has `Prepare` method. If no, keep finding `baseRouter`. If yes, it will execute the logic and `this.AppController` in `baseRouter` is the current executing Controller `BaseAdminRouter`. Then it will execute `BaseAdminRouter.NestPrepare` method. Then it will start executing related `GET` or `POST` method.
