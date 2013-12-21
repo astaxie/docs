@@ -1,9 +1,9 @@
 ---
-name: Deploy with nohup
+name: Stand alone Deploy
 sort: 1
 ---
 
-# Deploy with nohup
+# Stand alone Deploy
 This will run application at backend as a deamon. :TODO
 
 ## linux
