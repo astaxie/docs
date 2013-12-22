@@ -7,8 +7,25 @@
 	</font></b>
 </h4>
 
-<h4>	
-	<b>Donate by Alipay:</b><a href="http://me.alipay.com/astaxie" target="_blank"><img src="/static/img/alipay.png"></a>
+<h4>
+	<b>Donate by Paypal:</b>
+	<p>
+		<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+			<input type="hidden" name="cmd" value="_s-xclick">
+			<input type="hidden" name="hosted_button_id" value="SRG4CAN6L6HYU">
+			<table>
+			<tr><td><input type="hidden" name="on0" value="support beego">support beego</td></tr><tr><td><select name="os0">
+				<option value="Option 1">Option 1 $30.00 USD</option>
+				<option value="Option 2">Option 2 $50.00 USD</option>
+				<option value="Option 3">Option 3 $100.00 USD</option>
+				<option value="Option 4">Option 4 $500.00 USD</option>
+			</select> </td></tr>
+			</table>
+			<input type="hidden" name="currency_code" value="USD">
+			<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+			<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+		</form>
+	</p>
 </h4>
 
 ### Your donation will be used as:
