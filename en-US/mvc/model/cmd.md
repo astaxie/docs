@@ -1,9 +1,9 @@
 ---
-name: Command line
+name: Command Line
 sort: 8
 ---
 
-# Command line
+# Command Line
 
 You can call `orm.RunCommand()` after you registered models and database(s) as follows:
 
@@ -23,7 +23,7 @@ go build main.go
 # If possible, go run main.go orm has the same result.
 ```
 
-## Auto-create table
+## Table Auto Generating
 
 ```bash
 ./main orm syncdb -h
@@ -60,7 +60,7 @@ if err != nil {
 
 Even if you do not enable `force` mode, ORM also will auto-add new fields and indexes, but you have to deal with delete operations yourself.
 
-## Print SQL
+## Print SQL Statements
 
 ```bash
 ./main orm sqlall -h
