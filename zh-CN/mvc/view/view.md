@@ -96,9 +96,9 @@ beego 采用了 Go 语言内置的模板引擎，所有模板的语法和 Go 的
 
 当你设置了自动渲染，然后在你的 Controller 中没有设置任何的 TplNames，那么 Beego 会自动设置你的模板文件如下：
 
-	c.TplNames = c.ChildName + "/" + c.Ctx.Request.Method + "." + c.TplExt
+	c.TplNames = strings.ToLower(c.controllerName) + "/" + strings.ToLower(c.actionName) + "." + c.TplExt
 
-也就是你对应的 Controller 名字+请求方法名.模板后缀，也就是如果你的 Controller 名是 `AddController`，请求方法是 `POST`，默认的文件后缀是 `tpl`，那么就会默认请求 `/viewpath/AddController/post.tpl` 文件。
+也就是你对应的 Controller 名字+请求方法名.模板后缀，也就是如果你的 Controller 名是 `AddController`，请求方法是 `POST`，默认的文件后缀是 `tpl`，那么就会默认请求 `/viewpath/addcontroller/post.tpl` 文件。
 
 ## Layout 设计
 
@@ -118,6 +118,70 @@ Beego 就会首先解析 TplNames 指定的文件，获取内容赋值给 Layout
 	{{template "header.html"}}
 	处理逻辑
 	{{template "footer.html"}}
+
+## LayoutSection
+对于一个复杂的 `LayoutContent`，其中可能包括有javascript脚本、CSS 引用等，根据惯例，通常 css 会放到 Head 元素中，javascript 脚本需要放到 body 元素的末尾，而其它内容则根据需要放在合适的位置。在 `Layout` 页中仅有一个 `LayoutContent` 是不够的。所以在 `Controller` 中增加了一个 `LayoutSections`属性，可以允许 `Layout` 页中设置多个 `section`，然后每个 `section` 可以分别包含各自的子模板页。
+
+layout_blog.tpl:
+```
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lin Li</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+    {{.HtmlHead}}
+</head>
+<body>
+
+    <div class="container">
+        {{.LayoutContent}}
+    </div>
+    <div>
+        {{.SideBar}}
+    </div>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    {{.Scripts}}
+</body>
+</html>
+```
+
+html_head.tpl:
+```
+<style>
+     h1 {
+        color: red;
+     }
+</style>
+```
+ 
+scripts.tpl：
+```
+<script type="text/javascript">
+    $(document).ready(function() {
+        // bla bla bla
+    });
+</script>
+```
+
+逻辑处理如下所示：
+```
+type BlogsController struct {
+    beego.Controller
+}
+
+func (this *BlogsController) Get() {
+    this.Layout = "layout_blog.tpl"
+    this.TplNames = "blogs/index.tpl"
+    this.LayoutSections = make(map[string]string)
+    this.LayoutSections["HtmlHead"] = "blogs/html_head.tpl"
+    this.LayoutSections["Scripts"] = "blogs/scripts.tpl"
+    this.LayoutSections["Sidebar"] = ""
+}
+```		
 	
 ## renderform 使用
 
