@@ -72,7 +72,7 @@ func (this *MainController) Post() {
 
 Notes:
 
-* The definition of structTag form and [renderform method](Views_Templates.md#renderform-使用) are using the same tag.
+* The definition of structTag form and [renderform method](http://beego.me/docs/mvc/view/view.md#renderform) are using the same tag.
 * While define struct, if there is the form tag after that key, it will assign the value in the form which has the same name as that tag, otherwise it will assign the value in the form which has the same name as that field key. In the above example, Form value username and age will be assigned to Name and Age in user strut and Email will be assigned to Email in struct.
 * While call method ParseForm of Controller, the parameter pass in must be a pointer of struct, otherwise the assignment won't success and it will return a `xx must be a struct pointer` error.
 * If you want to ignore some fields, there are two ways: one is using lowercase for that field; another is use `-` as the value of the tag.

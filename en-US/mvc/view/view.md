@@ -119,7 +119,7 @@ Beego will parse file of TplNames and assign it to `LayoutContent` then render `
 Beego will cache all the template fiels. You can also implement layout by this way:
 
 	{{template "header.html"}}
-	处理逻辑
+	logic code
 	{{template "footer.html"}}
 	
 ## renderform
@@ -139,7 +139,7 @@ Define struct:
   The second param is form filed type. If empty will use `text`.
   The third param is the tag of form field. If empty will use `struct field name` as the tag name.
 * If `form` tag only has one value, it is the `name` attribute of form field. Except last value can be ignore all the other place must be separated by ','. E.g.: `form:",,username:"`
-* 如果要忽略一个字段，有两种办法，一是：字段名小写开头，二是：`form` 标签的值设置为 `-`
+* If you want to discase the field, you have two method 1. the filed is lower letter. 2. `form` tag set to `-`
 * To ignore a field there are two ways:
   The first one is use lower case for field name.
   The second one is set `-` as the value of `form` tag.
