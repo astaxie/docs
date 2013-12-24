@@ -12,6 +12,7 @@ bee是一个为了快速开发beego项目而创建的项目，通过bee可以快
 	go get github.com/beego/bee
 	
 
+>>>bee安装之后默认是在`gopath/bin`目录下，所以记得加入你的PATH，不然`bee`命令无法执行
 ## bee命令详解
 我们在命令行输入`bee`，可以看到如下的信息：
 

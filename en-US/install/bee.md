@@ -11,6 +11,8 @@ You can install Bee by this:
 
 	go get github.com/beego/bee
 
+>>>after install bee, it is in `gopath/bin`. You should add this path into your PATH, otherwise the `bee` will not affect.
+
 ## Bee commands
 Type `bee` in command line. We can see these messages:
 
