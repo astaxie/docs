@@ -107,7 +107,7 @@ Refresh browser we can see the result of the modifications are already
 there.
 
 ### api command
-The `new` command is used for crating new Web applications. I usually use Beego for developing API applications. We can use `api` command to create API applications. Here the result of running `bee api project_name`:
+The `new` command is used for creating new Web applications. I usually use Beego for developing API applications. We can use `api` command to create API applications. Here the result of running `bee api project_name`:
 
 ```
 bee api apiproject
