@@ -4,7 +4,7 @@ sort: 2
 ---
 
 # Introduction to Bee
-Bee is a project for developing Beego rapidly. With Bee we can crate, auto compile and reload, develop, test, and deploy easily.
+Bee is a project for developing Beego rapidly. With Bee we can create, auto compile and reload, develop, test, and deploy easily.
 
 ## Installing Bee
 You can install Bee by this:
